@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Shopify--App/static/css/main.b0c8111a.css",
+    "main.js": "/Shopify--App/static/js/main.fd385d8f.js",
+    "static/js/453.0186a437.chunk.js": "/Shopify--App/static/js/453.0186a437.chunk.js",
+    "static/media/hero_image.png": "/Shopify--App/static/media/hero_image.09ff1c4114792a6143c2.png",
+    "static/media/hand_icon.png": "/Shopify--App/static/media/hand_icon.9c7487cecb600f30901b.png",
+    "index.html": "/Shopify--App/index.html",
+    "main.b0c8111a.css.map": "/Shopify--App/static/css/main.b0c8111a.css.map",
+    "main.fd385d8f.js.map": "/Shopify--App/static/js/main.fd385d8f.js.map",
+    "453.0186a437.chunk.js.map": "/Shopify--App/static/js/453.0186a437.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0c8111a.css",
+    "static/js/main.fd385d8f.js"
+  ]
+}
