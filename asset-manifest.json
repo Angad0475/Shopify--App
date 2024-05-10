@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shopify--App/static/css/main.6382fb46.css",
-    "main.js": "/Shopify--App/static/js/main.3e16a576.js",
+    "main.js": "/Shopify--App/static/js/main.89d6756f.js",
     "static/js/453.0186a437.chunk.js": "/Shopify--App/static/js/453.0186a437.chunk.js",
     "static/media/hero_image.png": "/Shopify--App/static/media/hero_image.09ff1c4114792a6143c2.png",
     "static/media/exclusive_image.png": "/Shopify--App/static/media/exclusive_image.e8118f2149d9cb916980.png",
@@ -19,11 +19,11 @@
     "static/media/hand_icon.png": "/Shopify--App/static/media/hand_icon.9c7487cecb600f30901b.png",
     "index.html": "/Shopify--App/index.html",
     "main.6382fb46.css.map": "/Shopify--App/static/css/main.6382fb46.css.map",
-    "main.3e16a576.js.map": "/Shopify--App/static/js/main.3e16a576.js.map",
+    "main.89d6756f.js.map": "/Shopify--App/static/js/main.89d6756f.js.map",
     "453.0186a437.chunk.js.map": "/Shopify--App/static/js/453.0186a437.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6382fb46.css",
-    "static/js/main.3e16a576.js"
+    "static/js/main.89d6756f.js"
   ]
 }
