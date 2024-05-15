@@ -56,6 +56,16 @@
     color:whitesmoke;
     background-color: #6b2424;
     transition: all 0.2s;
+    transform:scale(1.5);
+    padding:2px;
+
+}
+
+.nav-logo-cart button:hover{
+    
+    color:whitesmoke;
+    background-color: #6b2424;
+    transition: all 0.2s;
     transform:scale(1.1);
 
 }
