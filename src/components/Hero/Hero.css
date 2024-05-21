@@ -39,14 +39,27 @@
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
-    background:#ff4141;
+    background:#120f0f;
     color: white;
     font-size: 22px;
     font-weight: 500;
+}
+.hero-latest-btn:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+    transition: all 0.2s;
+    background-color: #ff0000;
 }
 .hero-right{
     flex:1;
     display:flex;
     align-items:center;
     justify-content:center;
+}
+.arrow{
+   width:20px;
+}
+.right{
+    position:relative;
+    top:55px;
 }

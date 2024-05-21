@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './Navbar.css';
 import logo from '../../Assets/logo.png';
 
@@ -9,6 +9,7 @@ import {Link} from "react-router-dom"
 
 const Navbar =()=>{
 
+    const [Click,setClick]=useState("");
 
     
     return(
@@ -18,10 +19,10 @@ const Navbar =()=>{
               <p>SHOPIFY</p>
             </div>
             <ul className="nav-menu">
-                <li><Link to='/'>Shop</Link></li>
-                <li><Link to='/men'>Men</Link></li>
-                <li><Link to='/women'>Women</Link></li>
-                <li><Link to='/kids'>Kids</Link></li>
+                <li onClick={()=>{setClick("Shop")}}><Link style={{textDecoration:'none'}} to='/'>Shop</Link></li>
+                <li><Link style={{textDecoration:'none'}} to='/men'>Men</Link></li>
+                <li><Link style={{textDecoration:'none'}} to='/women'>Women</Link></li>
+                <li><Link style={{textDecoration:'none'}} to='/kids'>Kids</Link></li>
             </ul>
             <div className="nav-logo-cart">
                <Link to='/login'> <button>Log in</button></Link>

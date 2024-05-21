@@ -18,12 +18,12 @@ const Hero =()=>{
                      <p>for everyone</p>
                 </div>
                 <div className="hero-latest-btn">
-                    <div>Latest Collections</div>
-                    <img src={arrow_icon} alt=""/>
+                    <div className="latest">Latest Collections</div>
+                    <img  className='arrow'src={arrow_icon} alt=""/>
                 </div>
             </div>
             <div className="hero-right">
-                <img src={hero_image} alt=""/>
+                <img  className='right'src={hero_image} alt=""/>
 
             </div>
 
