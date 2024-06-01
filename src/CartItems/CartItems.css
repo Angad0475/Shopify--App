@@ -43,7 +43,9 @@
 }
 .cartitems-down{
     display: flex;
-    margin: 400px 0px;
+    margin: 50px 0px;
+    margin-bottom:-100px;
+    margin-left: 100px;
 }
 .cartitems-total{
     flex: 1;
@@ -72,6 +74,7 @@
         flex:1;
         font-size: 16px;
         font-weight: 500;
+        margin-left:-70px;
 }
 .cartitems-promocode p{
     color: #555;
@@ -98,4 +101,5 @@
     background: black;
     color: white;
     cursor:pointer;
+    margin-right:-400px;
 }
