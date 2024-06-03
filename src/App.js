@@ -1,17 +1,20 @@
-import {Routes,Route, BrowserRouter} from 'react-router-dom';
+import {Routes,Route} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
  import Shop from './pages/Shop';
  import ShopCategory from './pages/ShopCategory';
  import Cart from './pages/Cart';
  import Product from './pages/Product';
- import LoginSignup from './pages/LoginSignup';
 import Footer from './components/Footer/Footer';
 import men_banner from './Assets/banner_mens.png';
 import women_banner from './Assets/banner_women.png';
 import kid_banner from './Assets/banner_kids.png';
+import { useAuth0 } from '@auth0/auth0-react';
+
 
 function App(){
+    const {loginWithRedirect}= useAuth0();
     return(
+        <>
         <div>
                 
                 <Navbar/>
@@ -26,11 +29,19 @@ function App(){
                     <Route path=':productId' element={<Product/>}/>
                     </Route>
                     <Route path='/cart' element={<Cart/>}/>
-                    <Route path='/login' element={<LoginSignup/>}/>
+
+                
                 </Routes>
+                
                 <Footer/>
+
+            
                 
         </div>
+
+        
+    
+        </>
     );
 }
 

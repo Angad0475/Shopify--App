@@ -34,30 +34,7 @@
     font-family: monospace;
 }
 
-.nav-logo-cart button{
-  width: 157px;
-  height: 58px;
-  outline: none;
-  border: 1px solid #7a7a7a;
-  position:relative;
-  color: #515151;
-  font-size: 20px;
-  font-weight: 500;
-  background: white;
-  cursor:pointer;
-  border-radius: 40px;
-  margin-top:-70px;
-  top:-10px;
-}
- 
-.nav-logo-cart button:hover{
-    
-    color:whitesmoke;
-    background-color:#171717;
-    transition: all 0.2s;
-    transform:scale(1);
 
-}
 
 .nav-cart-count{
     width: 19px;
@@ -70,16 +47,19 @@
     border-radius: 5px;
     font-size: 20px;
     position:relative;
-    right:-7px;
-    top:-7px;
+    right:-27px;
+    top:-5px;
     
-    color:black; 
+    color:white; 
+    z-index:1;
+    font-size:14px;
+
 
 }
 
 .logo{
     position:relative;
-    left:120px;
+    left:285px;
     top:8px;
     cursor:pointer;
     height:50px;
@@ -90,9 +70,8 @@
 .logo:hover{
     transform: scale(1.05);
     transition: all 0.3s;
-     background-color:rgb(61, 188, 35);
      border-radius:15%;
-     color:whitesmoke;
+     color: black;
 }
 
 
@@ -109,7 +88,43 @@ a{
 a:hover{
     color:#171717;
 }
-
+.logout{
+    position:relative;
+    top:-14px;
+}
+.button{
+    width:0px;
+    
+    
+    position:relative;
+    top:18px;
+    right:-90px;
+    color:black; 
+}
+.sign{
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    padding:5px;
+    font-size:20px;
+    font-family:monospace;
+}
+.sign:hover{
+    color:whitesmoke;
+    background-color:#171717;
+    transition: all 0.2s;
+    transform:scale(1);
+}
+h4{
+    position:relative;
+    top:5px;
+}
+.circle{
+    position:relative;
+    right:-322px;
+    top:-18px;
+    font-size:18px;
+}
 
 
 
