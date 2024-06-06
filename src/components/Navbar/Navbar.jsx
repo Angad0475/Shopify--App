@@ -40,11 +40,8 @@ const Navbar = () => {
             </ul>
 
             <div className="button">
-                {
-            isAuthenticated ? (<button className="sign" onClick={(e)=>logout()}>LOGOUT
-            <h4>Hello {user.name}</h4></button>):(
-          
-            <button className="sign" onClick={(e)=>loginWithRedirect()}>SIGN IN</button>)}
+                <Link to='/login'><button className="sign">Sign In</button></Link>
+            
             </div>
 
             <div className="nav-logo-cart">
