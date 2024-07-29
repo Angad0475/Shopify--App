@@ -1,19 +1,27 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import './Navbar.css';
 import logo from '../../Assets/logo.png';
 
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
-import {useAuth0} from '@auth0/auth0-react'
 import { BsCart4 } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
+import { FaArrowCircleLeft } from "react-icons/fa";
 
 
 
 const Navbar = () => {
     const [click, setClick] = useState("");  // State to manage click events
     const { getTotalCartItems } = useContext(ShopContext);  // Context to get total cart items
-    const{user,loginWithRedirect, isAuthenticated,logout}=useAuth0();
+    const menuRef = useRef()
+
+    const dropdown_toggle=(e)=>{
+       menuRef.current.classList.toggle('nav-menu-visible');
+       e.target.classList.toggle('open');
+    
+       
+    }
+    
 
 
     
@@ -24,7 +32,8 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" />
                 <p>SHOPIFY</p>
             </div>
-            <ul className="nav-menu">
+            <FaArrowCircleLeft   className="nav-dropdown" onClick={dropdown_toggle}/>
+            <ul ref={menuRef} className="nav-menu">
                 <li onClick={() => setClick("Shop")}>
                     <Link style={{ textDecoration: 'none' }} to='/'>Shop</Link>
                 </li>
@@ -40,7 +49,7 @@ const Navbar = () => {
             </ul>
 
             <div className="button">
-                <Link to='/login'><button className="sign">Sign In</button></Link>
+                <Link to='/SignUp'><button className="sign">Sign In</button></Link>
             
             </div>
 
