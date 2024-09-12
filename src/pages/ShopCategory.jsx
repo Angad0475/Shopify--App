@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './CSS/ShopCategory.css';
 import { useSelector } from 'react-redux';
 import { selectAllProducts } from '../Redux/productSlice'; // Adjust this import based on your slice file
@@ -8,21 +8,39 @@ import Item from '../components/Item/Item';
 function ShopCategory(props) {
   const all_product = useSelector(selectAllProducts); // Get all products from Redux
 
+  const [sortOrder,setSortOrder]=useState('default');
+
+  const sortedProducts= [...all_product].filter(item=>item.category===props.category).sort((a,b)=>{
+    if(sortOrder==='price-asc'){
+      return a.new_price - b.new_price;
+    }
+    else if(sortOrder==='price-desc'){
+      return b.new_price -a.new_price;
+    }
+    return 0;
+  })
+
+  const handleSortChange=(e)=>{
+    setSortOrder(e.target.value)
+  }
+
   return (
     <div className='shop-category'>
       <img className='shopcategory-banner' src={props.banner} alt=''/>
       <div className="shopcategory-indexSort">
         <p>
-          <span>Showing 1-12</span> out of {all_product.length} products
+          <span>Showing 1-12</span> out of {sortedProducts.length} products
         </p>
         <div className="shopcategory-sort">
-            Sort by <img className='dropdown' src={dropdown_icon} alt=''/>
+            Sort by <select value={sortOrder} onChange={handleSortChange}>
+              <option value="default">Default</option>
+              <option value="price-asc">Price:Low to High </option>
+              <option value ='price-desc'>Price: High to Low</option>
+            </select>
         </div>
       </div>
       <div className="shopcategory-products">
-        {all_product.map((item, i) => {
-          if (props.category === item.category) {
-            return (
+        {sorted.map((item, i) => (
               <Item
                 key={i}
                 id={item.id}
@@ -31,10 +49,7 @@ function ShopCategory(props) {
                 new_price={item.new_price}
                 old_price={item.old_price}
               />
-            );
-          }
-          return null;
-        })}
+            ))};
       </div>
       <div className="shopcategory-loadmore">
         Explore More
