@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import './Navbar.css';
+import './Navbar.scss';
 import logo from '../../Assets/logo.png';
 import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';

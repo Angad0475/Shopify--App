@@ -1,5 +1,5 @@
 import React from 'react'
-import './ProductDisplay.css' 
+import './ProductDisplay.scss' 
 import star_icon from '../../Assets/star_icon.png';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/cartSlice';

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import './CSS/ShopCategory.css';
+import './CSS/ShopCategory.scss';
 import { useSelector } from 'react-redux';
 import { selectAllProducts } from '../Redux/productSlice'; // Adjust this import based on your slice file
 import dropdown_icon from '../Assets/dropdown_icon.png';
@@ -40,7 +40,7 @@ function ShopCategory(props) {
         </div>
       </div>
       <div className="shopcategory-products">
-        {sorted.map((item, i) => (
+        {sortedProducts.map((item, i) => (
               <Item
                 key={i}
                 id={item.id}

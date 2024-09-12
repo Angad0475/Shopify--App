@@ -1,5 +1,5 @@
 import React from 'react'
-import './RelatedProducts.css'
+import './RelatedProducts.scss'
 import data_product from '../Assets/data';
 import Item from '../components/Item/Item';
 function RelatedProducts() {
