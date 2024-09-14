@@ -1,5 +1,5 @@
 .carticon-product-icon{
-    width:90%;
+    width:40%;
     border:2px solid black;
     margin-left:0px;
 
@@ -11,7 +11,7 @@
 }
 .cartitems-format-main{
     display: grid;
-    grid-template-columns: 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr; /* Add column for remove button */
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr; /* Add column for remove button */
     align-items: center;
     gap: 35px;
     padding: 20px 0px;
