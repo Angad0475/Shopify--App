@@ -11,7 +11,7 @@
 }
 .cartitems-format-main{
     display: grid;
-    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr; /* Add column for remove button */
+    grid-template-columns: 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr; /* Add column for remove button */
     align-items: center;
     gap: 35px;
     padding: 20px 0px;
@@ -30,7 +30,7 @@
     transition:0.3s 
 }
 .cartitems-format{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
 }
 .carticon-product-icon{
