@@ -1,17 +1,27 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './ProductDisplay.scss' 
 import star_icon from '../../Assets/star_icon.png';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/cartSlice';
+
+ 
 
 
  function ProductDisplay(props) {
     const {product} = props;
     const dispatch = useDispatch();
 
+    const [selectedSize,setSelectedSize]=useState(null);
+
     const handleAddToCart=()=>{
-        dispatch(addToCart(product.id));
-    };
+        if(selectedSize){
+        dispatch(addToCart({ id:product.id, size: selectedSize}));
+    }else{
+        alert('please select a size befour adding to the cart.');
+    }
+};
+
+    
   return (
     <div className='productdisplay'>
         <div className='productdisplay-left'>
@@ -48,11 +58,13 @@ import { addToCart } from '../../Redux/cartSlice';
             <div className="productdisplay-right-sizes">
                 <h1>Select Size</h1>
                 <div className="productdisplay-right-sizes">
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>XL</div>
-                    <div>XXL</div>
+                    {['S','M','L','XL','XXL'].map((size)=>(
+                        <div key={size}
+                        onClick={()=>setSelectedSize(size)}
+                        className={selectedSize===size? 'size-option selected':'size-option'}>
+                        {size}
+                        </div>
+                    ))}
                 </div>
             </div>
             <button onClick={handleAddToCart}>ADD TO CART</button>
