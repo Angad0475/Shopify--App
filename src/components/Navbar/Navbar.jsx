@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import './Navbar.scss';
 import logo from '../../Assets/logo.png';
 import { useNavigate } from "react-router-dom";
@@ -6,19 +6,12 @@ import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
 import { FaCircle, FaArrowCircleLeft } from "react-icons/fa";
 import { getTotalCartItems } from "../../Redux/cartSlice";
-import { GoSidebarCollapse } from "react-icons/go";
-import { GoSidebarExpand } from "react-icons/go";
+import Sidebar from '../Sidebar/Sidebar'; // Import the Sidebar component
 
 const Navbar = () => {
-    const [click, setClick] = useState("");  // State to manage click events
-    const totalCartItems = useSelector(getTotalCartItems);  // Using selector to get total cart items
+    const totalCartItems = useSelector(getTotalCartItems);  // Redux selector for total cart items
     const menuRef = useRef();
     const navigate = useNavigate();
-    const [isOpen,setIsOpen]= useState(false);
-
-    const toggleSidebar=()=>{
-        setIsOpen(!isOpen);
-    };
 
     const dropdown_toggle = (e) => {
         menuRef.current.classList.toggle('nav-menu-visible');
@@ -26,43 +19,35 @@ const Navbar = () => {
     };
 
     const handleNavigation = (path) => {
-        navigate(path);
+        navigate(path); // Navigate to the given path
     };
+
+    // Define the navigation items to pass as props
+    const menuItems = [
+        { label: 'Shop', path: '/' },
+        { label: 'Men', path: '/men' },
+        { label: 'Women', path: '/women' },
+        { label: 'Kids', path: '/kids' },
+    ];
 
     return (
         <div className="navbar">
-            <div classname={isOpen ?'sidebar       open':'sidebar'}>
-                <button onclick={toggleSidebar}
-                 className="toggle-btn">
-                    {isOpen ?  <GoSidebarExpand className="Close Menu"/> : <GoSidebarCollapse className="Open Menu"/>}
-                 </button>
-                 {isOpen && (
-                 <nav className="menu">
-                    <li onClick={() => handleNavigation('/')}>Shop</li>
-                    <li onClick={() => handleNavigation('/men')}>Men</li>
-                    <li onClick={() => handleNavigation('/women')}>Women</li>
-                    <li onClick={() => handleNavigation('/kids')}>Kids</li>
-                 </nav>
-                )}
-            </div>
+            {/* Pass menuItems and handleNavigation as props to Sidebar */}
+            <Sidebar menuItems={menuItems} handleNavigation={handleNavigation} />
+
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
                 <p>SHOPIFY</p>
             </div>
+            
             <FaArrowCircleLeft className="nav-dropdown" onClick={dropdown_toggle} />
+            
             <ul ref={menuRef} className="nav-menu">
-                <li onClick={() => handleNavigation('/')}> {/* Navigate to home */}
-                    Shop
-                </li>
-                <li onClick={() => handleNavigation('/men')}> {/* Navigate to men */}
-                    Men
-                </li>
-                <li onClick={() => handleNavigation('/women')}> {/* Navigate to women */}
-                    Women
-                </li>
-                <li onClick={() => handleNavigation('/kids')}> {/* Navigate to kids */}
-                    Kids
-                </li>
+                {menuItems.map((item, index) => (
+                    <li key={index} onClick={() => handleNavigation(item.path)}>
+                        {item.label}
+                    </li>
+                ))}
             </ul>
 
             <div className="button">
@@ -79,31 +64,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-
-/*import React, { useState } from 'react';
-import './Slidebar.css';
-
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <div className={isOpen ? 'sidebar open' : 'sidebar'}>
-      <button onClick={toggleSidebar} className="toggle-btn">
-        {isOpen ?  <GoSidebarExpand className="Close Menu"/> : <GoSidebarCollapse className="Open Menu"/>}
-      </button>
-
-      <nav className="menu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-  );
-};
-
-export default Sidebar;
-*/
