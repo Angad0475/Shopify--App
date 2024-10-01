@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoReorderThreeOutline } from "react-icons/io5";
-import { IoMdClose } from "react-icons/io"; // Import icons
+import { GoSidebarExpand } from "react-icons/go"; // Import icons
 import './Sidebar.scss';
 
 const Sidebar = ({ menuItems, handleNavigation }) => {
@@ -23,7 +23,7 @@ const Sidebar = ({ menuItems, handleNavigation }) => {
                 {/* Close icon inside the sidebar */}
                 {isOpen && (
                     <button onClick={toggleSidebar} className="toggle-btn inside">
-                        <IoMdClose className="Close-Menu" />
+                        <GoSidebarExpand className="Close-Menu" />
                     </button>
                 )}
                 {isOpen && (

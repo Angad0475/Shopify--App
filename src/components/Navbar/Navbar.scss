@@ -30,6 +30,7 @@
     color: #626262;
     font-size: 20px;
     font-weight: 500;
+    margin-right:-12em;
 }
 .nav-menu li{
     display:flex;
@@ -53,8 +54,8 @@
     border-radius: 5px;
     font-size: 20px;
     position:relative;
-    right:-27px;
-    top:-5px;
+    right:-7.5px;
+    top:-22px;
     
     color:white; 
     z-index:1;
@@ -66,7 +67,7 @@
 .logo{
     position:relative;
     left:285px;
-    top:8px;
+    top:-2px;
     cursor:pointer;
     height:50px;
     width:50px;
@@ -97,11 +98,9 @@ a:hover{
 
 .button{
     width:0px;
-    
-    
     position:relative;
-    top:18px;
-    right:-90px;
+    top:1px;
+    right:-230px;
     color:black; 
 }
 .sign{
@@ -124,12 +123,9 @@ h4{
 }
 .circle{
     position:relative;
-    right:-322px;
-    top:-18px;
+    right:-303px;
+    top:-35px;
     font-size:18px;
-}
-.nav-dropdown{
-    visibility: hidden;
 }
 
 .slidebar {
@@ -228,5 +224,53 @@ h4{
     }
     
   @media (max-width:500px) and (min-width:400px){
+    .navbar{
+        width:97%;
+        position:sticky;
+        top:0;
+
+     .nav-logo{
+        width:2em;
+        margin-left:3em;
+     }   
+     .logo-head{
+        font-size:14px;
+     }
+
+     .nav-menu{
+        display:none;
+     }
+     .button{
+        margin-top:-3em;
+        margin-left:-3em;
+     }
+     .sign{
+        width:max-content;
+        font-size:14px;
+     }
+     .nav-logo-cart{
+        margin-left:-7em;
+        margin-top:-1em;
+
+        .logo{
+            width:2.5em;
+        }
+        .nav-cart-count{
+            font-size:13px;
+            color:#fff;
+            position:relative;
+            left:-0.1em;
+            top:-0.2em;
+        }
+        .circle{
+        margin-left:-27px;
+        width:15px;
+        margin-top:0.1em;;
+
+        
+        
+        }
+     }
+     }
     
   }

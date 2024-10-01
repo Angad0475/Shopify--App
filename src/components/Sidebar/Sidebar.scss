@@ -39,7 +39,7 @@
 
 .toggle-btn.outside {
   position: fixed;
-  top: 10px;
+  top: 25px;
   left: 15px;
   width:1.5em;;
   height:1.8em;
@@ -50,19 +50,20 @@
 
 .toggle-btn.inside {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 1em;
 
   .Close-Menu{
     position:relative;
-    right:-8em;
+    right:0em;
+    font-size:2em;
   }
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .menu a {
