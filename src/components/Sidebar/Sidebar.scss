@@ -107,4 +107,52 @@
   .toggle-btn{
     display:block;
   }
+  .toggle-btn.outside{
+    margin-top:-0.5em;
+  }
+  .toggle-btn.inside{
+    position:relative;
+    right:-12.5em;
+    height:3.5em;
+  }
+  .Close-Menu{
+    margin-right:-16em;
+  }
+}
+@media(max-width:500px) and (min-width:400px){
+  .sidebar{
+    width:28em;
+    height:500px;
+    .Close-Menu{
+      margin-left:-16em;
+
+    }
+    .Open-Menu{
+      display:none;
+    }
+    .menu{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:9em;
+      gap:2em;
+
+    }
+
+    
+  }
+  .toggle-btn{
+    display:block;
+  }
+  .toggle-btn.outside{
+    margin-top:-0.5em;
+  }
+  .toggle-btn.inside{
+    position:relative;
+    right:-12.5em;
+    height:3.5em;
+  }
+  .Close-Menu{
+    margin-right:-16em;
+  }
 }
