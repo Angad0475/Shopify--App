@@ -1,10 +1,15 @@
 .navbar{
-    display:flex;
+    display: flex;
     justify-content: space-around;
     padding: 16px;
-    box-shadow:0 1px 3px -2px black;
     box-shadow: 0 1px 3px -2px black;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 253, 253, 0.473); /* Slightly transparent */
+    backdrop-filter: blur(50px); /* Apply blur */
+    
 }
 .nav-logo{
     display:flex;
@@ -170,104 +175,58 @@ h4{
   .menu a:hover {
     background-color: #444;
   }
-@media(max-width:1280px){
-    .navbar{
-        padding: 12px 50px;
-    }
-    .nav-logo img{
-        width: 40px; 
-    }
-    .nav-logo p{
-        font-size: 25px;
-    }
-    .nav-menu{
-    gap: 30px;
-    font-size: 16px;
-    }
-    .nav-logo-cart{
-        gap: 30px;
-    }
-    .nav-logo-cart .logo{
-        width: 120px;
-        height: 45px;
-        font-size: 16px;
-    }
-    .nav-cart-count{
-        margin-left:-40px;
-        font-size: 12px;
-    }
-}
-@media(max-width:1024px){
-    .navbar{
-        padding: 12px 30px;
-        width:110%;
-    }
-    .nav-menu{
-        gap: 25px;
-        font-size: 14px;
-    }
-    .nav-logo-cart .logo{
-        width: 80px;
-        height: 35px;
-        font-size: 14px;
-    }
-    .sign{
-        position:relative;
-        top:-20px;
-        width: 80px;
-        height: 25px;
-        font-size: 14px;
 
-    }
-    .nav-logo-cart img{
-         width: 30px;
-    }
-    .nav-cart-count{
-        width: 18px;
-        height: 18px;
-    }
-}
-@media(max-width:800px){
+  @media(max-width:400px){
     .navbar{
-        padding: 10px 0px;
-    }
-    .nav-dropdown{
-      visibility: visible;
-      width:30px;
-      rotate:180deg;
-      transition:0.5s;
-    }
-    .nav-menu{
-        display: none;
-        height: 80px;
-        width: 100%;
-        position: absolute;
-        background-color:white;
-        justify-content: center;
-        top:50px;
-    }
-    .nav-menu-visible{
-        display: flex;
-    }
-    .nav-dropdown.open{
-        transform : rotate(90deg);
+        width:97%;
+        position:sticky;
+        top:0;
 
-    }
+     .nav-logo{
+        width:2em;
+        margin-left:3em;
+     }   
+     .logo-head{
+        font-size:14px;
+     }
 
-}
-@media(max-width:500px){
-    .navbar{
-        width:8px;
-        gap:0;
+     .nav-menu{
+        display:none;
+     }
+     .button{
+        margin-top:-3em;
+        margin-left:-3em;
+     }
+     .sign{
+        width:max-content;
+        font-size:14px;
+     }
+     .nav-logo-cart{
+        margin-left:-7em;
+        margin-top:-1em;
+
+        .logo{
+            width:2.5em;
+        }
+        .nav-cart-count{
+            font-size:13px;
+            color:#fff;
+            position:relative;
+            left:-0.1em;
+            top:-0.2em;
+        }
+        .circle{
+        margin-left:-27px;
+        width:15px;
+        margin-top:0.1em;;
+
+        
+        
+        }
+     }
+     }
     }
-    .nav-logo{
-        transform: scale(0.8);
-    }
-    .nav-menu{
-        height: 70px;
-        top: 50px;
-    }
-    .nav-logo-cart{
-          transform: scale(0.8);
-    }
-}
+    
+  @media (max-width:500px) and (min-width:400px){
+    
+  }

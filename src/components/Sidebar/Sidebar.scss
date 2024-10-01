@@ -1,44 +1,61 @@
+/* Sidebar */
 .sidebar {
   position: fixed;
-  display:none;
   top: 0;
   left: 0;
   width: 250px;
-  height: 100%;
-  background-color: #333;
+  height: 720%;
+  background-color:  rgba(112, 101, 101, 0.45);
+  backdrop-filter: blur(30px);
   color: white;
-  z-index: 10;
+  z-index: 120;
   transition: transform 0.3s ease;
-  transform: translateX(-100%); // Hidden by default
-
-  // Make the sidebar visible on small screens only (tablets and mobile devices)
-  @media (max-width: 768px) {
-      display: block; // Show on screens smaller than 768px
-  }
+  transform: translateX(-100%); /* Hidden by default */
+}
+.Open-Menu{
+  background-color: rgba(255, 253, 253, 0.473);
+  backdrop-filter: blur(50px);
+  position:relative;
+  left:-0.5em;
+}
+.toggle-btn.outside{
+  background-color: rgba(255, 253, 253, 0.473);
 }
 
 .sidebar.open {
-  transform: translateX(0); // Slide in when open
+  transform: translateX(0); 
+  background-color:  rgba(7, 7, 7, 1.0);
+  backdrop-filter: blur(30px);
+  opacity:1;
 }
 
 .toggle-btn {
-  position: absolute;
-  top: 10px;
-  right: -60px;
   background-color: #333;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+}
 
-  // Show the toggle button only on small screens
-  @media (max-width: 768px) {
-      display: block; // Show on screens smaller than 768px
-  }
+.toggle-btn.outside {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  width:1.5em;;
+  height:1.8em;
+  z-index: 11;
+  color:black;
+  font-size:24px; /* Ensure it's above the sidebar */
+}
 
-  // Hide the toggle button on larger screens
-  @media (max-width: 769px) {
-      display: block; // Hide on screens wider than 768px
+.toggle-btn.inside {
+  position: absolute;
+  top: 10px;
+  right: 1em;
+
+  .Close-Menu{
+    position:relative;
+    right:-8em;
   }
 }
 
@@ -57,4 +74,36 @@
 
 .menu a:hover {
   background-color: #444;
+  border:2px solid black;
+  color:black;
+  background-color: aliceblue;
+
+}
+
+
+@media(max-width:400px){
+  .sidebar{
+    width:28em;
+    height:1600%;
+    .Close-Menu{
+      margin-left:-16em;
+
+    }
+    .Open-Menu{
+      display:none;
+    }
+    .menu{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:9em;
+      gap:2em;
+
+    }
+
+    
+  }
+  .toggle-btn{
+    display:block;
+  }
 }

@@ -37,12 +37,12 @@ const Navbar = () => {
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
-                <p>SHOPIFY</p>
+                <p className="logo-head">SHOPIFY</p>
             </div>
             
-            <FaArrowCircleLeft className="nav-dropdown" onClick={dropdown_toggle} />
+        
             
-            <ul ref={menuRef} className="nav-menu">
+            <ul className="nav-menu">
                 {menuItems.map((item, index) => (
                     <li key={index} onClick={() => handleNavigation(item.path)}>
                         {item.label}
