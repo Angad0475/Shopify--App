@@ -56,3 +56,71 @@
     font-size: 16px;
     cursor:pointer;
 }
+@media(max-width:400px){
+    .newsletter {
+        padding: 15px;
+      }
+    
+      .newsletter h1 {
+        font-size: 20px;
+      }
+    
+      .newsletter p {
+        font-size: 12px;
+      }
+    
+      .box{
+        max-width: max-content;
+
+        .place{
+            width:max-content;
+            position:relative;
+            left:-8em;
+            top:-5.5em;
+        }
+
+        .subs{
+            margin-left:-28em;
+            margin-top:15em;
+            width:5em;
+            height:5em;
+            font-size:12px;
+            position:relative;
+            left:6.5em;
+        }
+      }
+}
+@media (max-width:500px) and (min-width:400px){
+  .newsletter {
+    padding: 15px;
+  }
+
+  .newsletter h1 {
+    font-size: 20px;
+  }
+
+  .newsletter p {
+    font-size: 12px;
+  }
+
+  .box{
+    max-width: max-content;
+
+    .place{
+        width:max-content;
+        position:relative;
+        left:-8em;
+        top:-5.5em;
+    }
+
+    .subs{
+        margin-left:-28em;
+        margin-top:15em;
+        width:5em;
+        height:5em;
+        font-size:12px;
+        position:relative;
+        left:6.5em;
+    }
+  }
+}
