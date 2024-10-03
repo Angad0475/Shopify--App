@@ -4,7 +4,7 @@ import logo from '../../Assets/logo.png';
 import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
-import { FaCircle, FaArrowCircleLeft } from "react-icons/fa";
+import { FaCircle } from "react-icons/fa";
 import { getTotalCartItems } from "../../Redux/cartSlice";
 import Sidebar from '../Sidebar/Sidebar'; // Import the Sidebar component
 
@@ -40,8 +40,6 @@ const Navbar = () => {
                 <p className="logo-head">SHOPIFY</p>
             </div>
             
-        
-            
             <ul className="nav-menu">
                 {menuItems.map((item, index) => (
                     <li key={index} onClick={() => handleNavigation(item.path)}>
@@ -51,7 +49,10 @@ const Navbar = () => {
             </ul>
 
             <div className="button">
-                <button className="sign" onClick={() => handleNavigation('/SignUp')}>Sign In</button>
+                {/* Change the path to '/signup' to match updated route in App.js */}
+                <button className="sign" onClick={() => handleNavigation('/signup')}>
+                    Sign In
+                </button>
             </div>
 
             <div className="nav-logo-cart">
