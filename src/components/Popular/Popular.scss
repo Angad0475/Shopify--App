@@ -9,7 +9,7 @@
 
 }
 .popular h1{
-    color:#171717;
+    color: #171717;
     font-size:50px;
     font-weight:600;
 }
@@ -77,13 +77,32 @@
     }
 }
 
-@media(max-width: 500px){
-    .popular{
-        height: 90vh;
+@media(max-width: 400px){
+    .popular {
+        height: 10vh;
     }
+    .popular h1{
+        font-size:35px;
+    }
+    
     .popular-item{
         display:grid;
-        grid-template-columns: 1fr,1fr;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+        margin-top: 30px;
+    }
+}
+@media(max-width:500px) and (min-width:400px){
+    .popular {
+        height: 10vh;
+    }
+    .popular h1{
+        font-size:35px;
+    }
+    
+    .popular-item{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
         gap:10px;
         margin-top: 30px;
     }
