@@ -182,11 +182,12 @@ h4{
 
      .nav-logo{
         width:2em;
-        margin-left:3em;
+        margin-left:1em;
         
      }   
      .logo-head{
         font-size:14px;
+        margin-left:-0.5em;
      }
 
      .nav-menu{
@@ -196,7 +197,7 @@ h4{
         margin-top:-3em;
         margin-left:-3em;
         position: relative;
-        left:8em;
+        left:7em;
         top:1.5em;
         z-index:20;
 
@@ -218,16 +219,15 @@ h4{
             font-size:13px;
             color:#fff;
             position:relative;
-            left:-0.1em;
-            top:-0.8em;
+            left:0em;
+            top:-1em;
         }
         .circle{
-        
         width:15px;
         margin-top:0.1em;
         position: relative;
-        right:-16.35em;
-        top:-25.1px;
+        right:-16.45em;
+        top:-28.4px;
 
         
         
@@ -244,11 +244,12 @@ h4{
 
      .nav-logo{
         width:2em;
-        margin-left:3em;
+        margin-left:1em;
         
      }   
      .logo-head{
         font-size:14px;
+        margin-left:-0.5em;
      }
 
      .nav-menu{
@@ -258,7 +259,7 @@ h4{
         margin-top:-3em;
         margin-left:-3em;
         position: relative;
-        left:8em;
+        left:7em;
         top:1.5em;
         z-index:20;
 
@@ -280,16 +281,19 @@ h4{
             font-size:13px;
             color:#fff;
             position:relative;
-            left:-0.1em;
-            top:-0.8em;
+            left:0em;
+            top:-1em;
         }
-        .circle{     
+        .circle{
         width:15px;
         margin-top:0.1em;
         position: relative;
-        right:-16.35em;
-        top:-25.1px;   
+        right:-16.45em;
+        top:-28.4px;
+
+        
+        
         }
-      }
-    }
+     }
+     }
 }
