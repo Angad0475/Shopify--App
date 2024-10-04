@@ -131,12 +131,15 @@
         margin-top:8em;
     }
     .inputs{
-        margin-right:-4em;
+        margin-right:-2em;
+    }
+    .error{
+        margin-left:-8em;
     }
     .input{
         width:80%;
         position:relative;
-        right:-2em;
+        right:-3em;
         margin-left:-2em;
         margin-right:-7em;
     }
@@ -151,6 +154,7 @@
         position:relative;
         left:4.5em;
     }
+    
 }
 
 @media (max-width:500px) and (min-width:400px){
@@ -158,12 +162,15 @@
         margin-top:8em;
     }
     .inputs{
-        margin-right:-4em;
+        margin-right:-2em;
+    }
+    .error{
+        margin-left:-8em;
     }
     .input{
         width:80%;
         position:relative;
-        right:-2em;
+        right:-3em;
         margin-left:-2em;
         margin-right:-7em;
     }
@@ -178,4 +185,5 @@
         position:relative;
         left:4.5em;
     }
+    
 }
