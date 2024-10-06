@@ -5,7 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-function LoginSignup() {
+function LoginSignup({ setIsAuthenticated }) {
   const [action, setAction] = useState("Login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -40,7 +40,7 @@ function LoginSignup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Perform the form submission action here, then navigate
+      setIsAuthenticated(true);  // Update authentication status to true
       navigate('/');  // Redirect to the "Shop" page after submission
     }
   };

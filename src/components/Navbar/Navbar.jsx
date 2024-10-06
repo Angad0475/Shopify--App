@@ -6,20 +6,19 @@ import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
 import { getTotalCartItems } from "../../Redux/cartSlice";
-import Sidebar from '../Sidebar/Sidebar'; // Import the Sidebar component
+import Sidebar from '../Sidebar/Sidebar';
 
-const Navbar = () => {
-    const totalCartItems = useSelector(getTotalCartItems);  // Redux selector for total cart items
-    const menuRef = useRef();
+const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
+    const totalCartItems = useSelector(getTotalCartItems);
     const navigate = useNavigate();
 
-    const dropdown_toggle = (e) => {
-        menuRef.current.classList.toggle('nav-menu-visible');
-        e.target.classList.toggle('open');
+    const handleSignOut = () => {
+        setIsAuthenticated(false);  // Log the user out
+        navigate('/'); // Redirect to homepage
     };
 
-    const handleNavigation = (path) => {
-        navigate(path); // Navigate to the given path
+    const handleSignUp = () => {
+        navigate('/signup'); // Navigate to the login/signup page
     };
 
     // Define the navigation items to pass as props
@@ -32,8 +31,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            {/* Pass menuItems and handleNavigation as props to Sidebar */}
-            <Sidebar menuItems={menuItems} handleNavigation={handleNavigation} />
+            <Sidebar menuItems={menuItems} handleNavigation={(path) => navigate(path)} />
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
@@ -42,21 +40,27 @@ const Navbar = () => {
             
             <ul className="nav-menu">
                 {menuItems.map((item, index) => (
-                    <li key={index} onClick={() => handleNavigation(item.path)}>
+                    <li key={index} onClick={() => navigate(item.path)}>
                         {item.label}
                     </li>
                 ))}
             </ul>
 
             <div className="button">
-                {/* Change the path to '/signup' to match updated route in App.js */}
-                <button className="sign" onClick={() => handleNavigation('/signup')}>
-                    Sign In
-                </button>
+                {/* Conditionally render Sign In or Sign Out button */}
+                {isAuthenticated ? (
+                    <button className="sign" onClick={handleSignOut}>
+                        Sign Out
+                    </button>
+                ) : (
+                    <button className="sign" onClick={handleSignUp}>
+                        Sign In
+                    </button>
+                )}
             </div>
 
             <div className="nav-logo-cart">
-                <BsCart4 className="logo" alt="cart" onClick={() => handleNavigation('/cart')} />
+                <BsCart4 className="logo" alt="cart" onClick={() => navigate('/cart')} />
                 <div className="nav-cart-count">{totalCartItems}</div>
                 <FaCircle className="circle" />
             </div>
