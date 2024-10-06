@@ -29,14 +29,14 @@ function CartItems() {
                 const product = all_product.find(p => p.id === cartItem.id);
                 if (product) {
                     return (
-                        <div key={product.id}>
+                        <div className="details" key={product.id}>
                             <div className="cartitems-format cartitems-format-main">
                                 <img src={product.image} alt="" className="carticon-product-icon"/>
-                                <p>{product.name}</p>
-                                <p>{cartItem.size}</p> {/* Show selected size */}
-                                <p>{product.new_price}</p>
+                                <p className="name">{product.name}</p>
+                                <p className="size">{cartItem.size}</p> {/* Show selected size */}
+                                <p className="price">{product.new_price}</p>
                                 <button className="cartitems-quantity">{cartItem.quantity}</button>
-                                <p>${product.new_price * cartItem.quantity}</p>
+                                <p className="total">${product.new_price * cartItem.quantity}</p>
                                 <div className='remove' ><MdDeleteOutline
                                     onClick={() => dispatch(removeFromCart({ id: product.id, size: cartItem.size }))} 
                                     alt='Remove item'/>
@@ -67,12 +67,12 @@ function CartItems() {
                             <h3>${totalCartAmount}</h3>
                         </div>
                     </div>
-                    <Link to='/checkout'><button className=''>PROCEED TO CHECKOUT</button></Link>
+                    <Link to='/checkout'><button className='checkouts'>PROCEED TO CHECKOUT</button></Link>
                 </div>
                 <div className="cartitems-promocode">
                     <p>If you have a promo code, Enter it here. </p>
                     <div className="cartitems-promobox">
-                        <input type='text' placeholder='promo code' />
+                        <input  className='promo'type='text' placeholder='promo code' />
                         <button>Submit</button>
                     </div>
                 </div>

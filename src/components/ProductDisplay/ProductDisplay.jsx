@@ -67,7 +67,7 @@ import { addToCart } from '../../Redux/cartSlice';
                     ))}
                 </div>
             </div>
-            <button onClick={handleAddToCart}>ADD TO CART</button>
+            <button className='cart' onClick={handleAddToCart}>ADD TO CART</button>
             <p className='productdisplay-right-category'><span>category :</span>Women, T-Shirt,Crop Top</p>
             <p className='productdisplay-right-category'><span>Tags :</span>Modern, Latest</p>
         </div>

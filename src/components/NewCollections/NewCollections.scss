@@ -30,7 +30,10 @@
 
 @media(max-width:400px){
     .new-collections h1{
-        font-size:32px;
+        font-size:35px;
+    }
+    .new-collections hr{
+        margin-left:-3.7em;
     }
     .collections{
         display: grid;
@@ -40,7 +43,10 @@
 
 @media(max-width:500px) and (min-width:400px){
     .new-collections h1{
-        font-size:32px;
+        font-size:40px;
+    }
+    .new-collections hr{
+        margin-left:-4.5em;
     }
     .collections{
         display: grid;
