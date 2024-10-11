@@ -31,7 +31,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
 
     return (
         <div className="navbar">
-            <Sidebar menuItems={menuItems} handleNavigation={(path) => navigate(path)} />
+            <Sidebar className='sidebar' menuItems={menuItems} handleNavigation={(path) => navigate(path)} />
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />

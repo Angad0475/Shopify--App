@@ -20,6 +20,7 @@
 }
 .toggle-btn.outside{
   background-color: rgba(255, 253, 253, 0.473);
+  visibility: hidden;
 }
 
 .sidebar.open {
@@ -112,6 +113,7 @@
   .toggle-btn.outside{
     margin-top:-0.5em;
     margin-left:-0.4em;
+    visibility:visible;
   }
   .toggle-btn.inside{
     position:relative;
@@ -154,6 +156,7 @@
   .toggle-btn.outside{
     margin-top:-0.5em;
     margin-left:-0.1em;
+    visibility:visible;
   }
   .toggle-btn.inside{
     position:relative;
@@ -164,9 +167,4 @@
     margin-right:-16em;
   }
 }
-@media (min-width:501px){
-  .sidebar{
-  display:none;
-  visibility:hidden;
-  }
-}
+
