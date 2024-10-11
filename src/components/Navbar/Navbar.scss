@@ -83,13 +83,17 @@
      color: black;
 }
 
-
 li:hover{
+    transform: scale(1.1);
     text-decoration: underline;
-    transform:scale(1.1);
     transition: all 0.2s;
     color:#171717;
-
+}
+li:active{
+    transform: scale(0.9);
+    text-decoration: underline;
+    transition: all 0.2s;
+    color:#171717;
 }
 a{
     color:#7a7a7a
