@@ -34,7 +34,7 @@ function CartItems() {
                                 <img src={product.image} alt="" className="carticon-product-icon"/>
                                 <p className="name">{product.name}</p>
                                 <p className="size">{cartItem.size}</p> {/* Show selected size */}
-                                <p className="price">{product.new_price}</p>
+                                <p className="price">${product.new_price}</p>
                                 <button className="cartitems-quantity">{cartItem.quantity}</button>
                                 <p className="total">${product.new_price * cartItem.quantity}</p>
                                 <div className='remove' ><MdDeleteOutline

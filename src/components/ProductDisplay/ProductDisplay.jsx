@@ -13,7 +13,8 @@ import { addToCart } from '../../Redux/cartSlice';
 
     const [selectedSize,setSelectedSize]=useState(null);
 
-    const handleAddToCart=()=>{
+    const handleAddToCart=(e)=>{
+        e.preventDefault();
         if(selectedSize){
         dispatch(addToCart({ id:product.id, size: selectedSize}));
     }else{
