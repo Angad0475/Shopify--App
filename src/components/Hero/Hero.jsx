@@ -18,7 +18,7 @@ const Hero =()=>{
                      <p>for everyone</p>
                 </div>
                 <div className="hero-latest-btn">
-                    <div className="latest">Latest Collections</div>
+                   <a href="#collections"><div className="latest">Latest Collections</div></a>
                     <img  className='arrow'src={arrow_icon} alt=""/>
                 </div>
             </div>

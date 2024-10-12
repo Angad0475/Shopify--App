@@ -65,6 +65,15 @@
   position:relative;
   top:2em;
 }
+
+.newsletter div button:hover{
+  background:#454545;
+  transition:0.3s;
+}
+.newsletter div button:active{
+  transform:scale(0.8);
+  transition:0.3s;
+}
 @media(max-width:400px){
     .newsletter {
         padding: 15px;
@@ -97,6 +106,7 @@
             position:relative;
             left:6.5em;
         }
+        
       }
 }
 @media (max-width:500px) and (min-width:400px){

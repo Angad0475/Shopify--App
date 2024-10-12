@@ -50,6 +50,13 @@
     transition: all 0.2s;
     background-color: #ff0000;
 }
+
+.hero-latest-btn:active{
+    cursor:pointer;
+    transform: scale(0.9);
+    transition: all 0.2s;
+    background-color: #ff0000;
+}
 .hero-right{
     flex:1;
     display:flex;

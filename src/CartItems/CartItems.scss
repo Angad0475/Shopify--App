@@ -73,6 +73,16 @@
      font-weight: 600;
      cursor:pointer;
 }
+.cartitems-total button:hover{
+    background: #b90303;
+    transition: 0.2s;
+}
+.cartitems-total button:active{
+    transform:scale(0.8);
+    transition: 0.2s;
+
+
+}
 .cartitems-promocode{
         flex:1;
         font-size: 16px;

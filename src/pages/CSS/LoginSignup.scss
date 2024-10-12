@@ -88,6 +88,11 @@
     transition: 0.3s;
     cursor:pointer;
 }
+
+.submit:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+}
 .gray{
     background: #EAEAEA;
     display:flex;
@@ -104,6 +109,10 @@
     cursor:pointer;
     background: #b7b6b6;
     transition:0.3s;
+}
+.gray:active{
+    transform:scale(0.8);
+    transition:0.2s;
 }
 .submit-btn{
     background: #EAEAEA;
@@ -124,6 +133,11 @@
     cursor:pointer;
     background: #b7b6b6;
     transition:0.3s;
+}
+.submit-btn:active{
+    
+    transform: scale(0.8);
+    transition:0.2s;
 }
 
 @media(max-width:400px){

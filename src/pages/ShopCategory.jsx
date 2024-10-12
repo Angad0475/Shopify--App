@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectAllProducts } from '../Redux/productSlice'; // Adjust this import based on your slice file
 import dropdown_icon from '../Assets/dropdown_icon.png';
 import Item from '../components/Item/Item';
-
+import { CiFilter } from "react-icons/ci";
 function ShopCategory(props) {
   const all_product = useSelector(selectAllProducts); // Get all products from Redux
 
@@ -28,11 +28,10 @@ function ShopCategory(props) {
     <div className='shop-category'>
       <img className='shopcategory-banner' src={props.banner} alt=''/>
       <div className="shopcategory-indexSort">
-        <p>
-          <span>Showing 1-12</span> out of {sortedProducts.length} products
-        </p>
+         <p className="product-count">
+         <span>Showing 1-12</span> out of {sortedProducts.length} products</p>
         <div className="shopcategory-sort">
-            Sort by <select value={sortOrder} onChange={handleSortChange}>
+        <CiFilter className='filter'/>  <select value={sortOrder} onChange={handleSortChange}>
               <option value="default">Default</option>
               <option value="price-asc">Price:Low to High </option>
               <option value ='price-desc'>Price: High to Low</option>

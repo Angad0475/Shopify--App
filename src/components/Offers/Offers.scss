@@ -49,7 +49,15 @@
    padding-top: 50px;
 }
 .check:hover{
-    cursor:pointer
+    cursor:pointer;
+    background:rgb(203, 2, 2);
+    transition:0.2s;
+
+}
+.check:active{
+    cursor:pointer;
+    transform: scale(0.9);
+    transition: all 0.3s;
 
 }
 .offers-right img{

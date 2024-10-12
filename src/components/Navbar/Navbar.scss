@@ -83,6 +83,13 @@
      color: black;
 }
 
+.logo:active{
+    transform: scale(0.9);
+    transition: all 0.3s;
+     border-radius:15%;
+     color: black;
+}
+
 li:hover{
     transform: scale(1.1);
     text-decoration: underline;
@@ -122,6 +129,13 @@ a:hover{
     background-color:#171717;
     transition: all 0.2s;
     transform:scale(1);
+    cursor:pointer;
+}
+.sign:active{
+    color:whitesmoke;
+    background-color:#171717;
+    transition: all 0.2s;
+    transform:scale(0.8);
 }
 h4{
     position:relative;

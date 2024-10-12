@@ -15,14 +15,8 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-.shopcategory-sort{
-    padding: 10px 20px;
-    border-radius: 40px;
-    border:1px solid #888;
-}
-.shopcategory-indexSort p span{
-    font-weight: 600;
-}
+
+
 .shopcategory-products{
     margin:20px 100px;
     display: grid;
@@ -48,6 +42,69 @@ img{
     font-weight: 500;
     cursor:pointer;
 }
+
+.shopcategory-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the label and the dropdown */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f8f8;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid #ddd;
+    margin: 12px 0; /* Add some spacing from surrounding elements */
+}
+
+.shopcategory-sort select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 15px;
+}
+
+.shopcategory-sort select:hover {
+    border-color: #007bff; /* Change border color on hover */
+}
+
+.shopcategory-sort select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow on focus */
+    border-color: #007bff; /* Blue border when focused */
+}
+
+.shopcategory-sort option {
+    padding: 10px;
+}
+
+
+.product-count {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center; /* Center vertically */
+    background-color: #f8f8f8; /* Light background for contrast */
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin: 12px 0; /* Space around the container */
+}
+
+.product-count span {
+    font-weight: bold; /* Make the range of products more prominent */
+    color: #007bff; /* Use a blue color to draw attention */
+    margin-right: 5px; /* Space between the range and the rest of the text */
+}
+
 
 
 @media(max-width:400px){
@@ -82,7 +139,7 @@ img{
     }
     .shopcategory-sort{
         position:relative;
-        right:-3em;   
+        right:-3.5em;   
         width:30%;
         text-align: center;
         font-size:12px;
@@ -92,7 +149,7 @@ img{
     }
     .shopcategory-sort select{
         width:35%;
-        margin-left:-4.5em;
+        margin-left:1.8em;
     }
     .shopcategory-sort option{
         width:1em;
@@ -143,8 +200,9 @@ img{
         
     }
     .shopcategory-sort select{
-        width:30%;
-        margin-left:-4.8em;
+        width:15%;
+    
+        margin-left:-0.2em;
     }
     .shopcategory-sort option{
         width:1em;

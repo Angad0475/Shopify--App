@@ -48,6 +48,10 @@
   color:black;
   font-size:24px; /* Ensure it's above the sidebar */
 }
+.toggle-btn.outside:active{
+  transform:scale(0.7);
+  transition:0.3s;
+}
 
 .toggle-btn.inside {
   position: absolute;
@@ -59,6 +63,11 @@
     right:0;
     font-size:2em;
   }
+
+}
+.toggle-btn.inside:active{
+  transform:scale(0.7);
+  transition:0.3s;
 }
 
 .menu {
@@ -80,6 +89,10 @@
   color:black;
   background-color: aliceblue;
 
+}
+.menu a:active{
+  transform:scale(0.8);
+  transition:0.3s;
 }
 
 
