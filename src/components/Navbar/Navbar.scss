@@ -78,27 +78,25 @@
 
 .logo:hover{
     transform: scale(1.05);
-    transition: all 0.3s;
+    transition: all 0.2s;
      border-radius:15%;
      color: black;
 }
 
 .logo:active{
     transform: scale(0.9);
-    transition: all 0.3s;
+    transition: all 0.2s;
      border-radius:15%;
      color: black;
 }
 
 li:hover{
     transform: scale(1.1);
-    text-decoration: underline;
     transition: all 0.2s;
     color:#171717;
 }
 li:active{
     transform: scale(0.9);
-    text-decoration: underline;
     transition: all 0.2s;
     color:#171717;
 }
@@ -156,7 +154,7 @@ h4{
     height: 100%;
     background-color: #333;
     color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     transform: translateX(-100%);
   }
   
@@ -185,12 +183,19 @@ h4{
     padding: 10px;
     text-decoration: none;
     color: white;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
   }
   
   .menu a:hover {
     background-color: #444;
   }
+  .active-link {
+    color: #444;
+    font-weight: bold; // Choose a color to indicate the active state
+    border-bottom: 1px solid #444;
+    transform:scale(1.1); // Optional: Add a border or other styling
+    transition: 0.2s;
+}
 
   @media(max-width:400px){
     .navbar{

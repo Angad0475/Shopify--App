@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import './Navbar.scss';
 import logo from '../../Assets/logo.png';
 import { useNavigate } from "react-router-dom";
@@ -13,13 +13,16 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
     const navigate = useNavigate();
 
     const handleSignOut = () => {
-        setIsAuthenticated(false);  // Log the user out
+        setIsAuthenticated(false); // Log the user out
         navigate('/'); // Redirect to homepage
     };
 
     const handleSignUp = () => {
         navigate('/signup'); // Navigate to the login/signup page
     };
+
+    // State to track the active navigation link
+    const [activeLink, setActiveLink] = useState('');
 
     // Define the navigation items to pass as props
     const menuItems = [
@@ -29,9 +32,14 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
         { label: 'Kids', path: '/kids' },
     ];
 
+    const handleNavigation = (path) => {
+        setActiveLink(path); // Update the active link state
+        navigate(path); // Navigate to the selected path
+    };
+
     return (
         <div className="navbar">
-            <Sidebar className='sidebar' menuItems={menuItems} handleNavigation={(path) => navigate(path)} />
+            <Sidebar className='sidebar' menuItems={menuItems} handleNavigation={handleNavigation} />
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
@@ -40,7 +48,11 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
             
             <ul className="nav-menu">
                 {menuItems.map((item, index) => (
-                    <li key={index} onClick={() => navigate(item.path)}>
+                    <li
+                        key={index}
+                        onClick={() => handleNavigation(item.path)}
+                        className={activeLink === item.path ? 'active-link' : ''}
+                    >
                         {item.label}
                     </li>
                 ))}
@@ -66,6 +78,6 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
             </div>
         </div>
     );
-}
+};
 
 export default Navbar;
