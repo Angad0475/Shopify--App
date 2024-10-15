@@ -6,13 +6,15 @@ import instagram_icon from '../../Assets/instagram_icon.png';
 import pintester_icon from '../../Assets/pintester_icon.png';
 
 import whatsapp_icon from '../../Assets/whatsapp_icon.png';
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
 
  function Footer() {
   return (
     <div className='footer'>
         <div className='footer-logo'>
             <img src={footer_logo} alt=''/>
-            <p>SHOPIFY</p>
         </div>
         <ul className='footer-links'>
             <li>Company</li>
@@ -23,13 +25,13 @@ import whatsapp_icon from '../../Assets/whatsapp_icon.png';
         </ul>
         <div className="footer-social-icon">
             <div className="footer-icons-container">
-                <img src={instagram_icon} alt=''/>
+                <FaInstagram/>
             </div>
             <div className="footer-icons-container">
-                <img src={pintester_icon} alt=''/>
+                <FaPinterest/>
             </div>
             <div className='footer-icons-container'>
-                <img src={whatsapp_icon} alt=''/>
+                <FaWhatsapp/>
             </div>
         </div>
         <div className='footer-copyright'>

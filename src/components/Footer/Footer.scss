@@ -10,13 +10,10 @@
 .footer-logo{
     display:flex;
     align-items:center;
+    margin-left:1.5em;
     gap: 20px;   
 }
-.footer-logo p{
-    color: #383838;
-    font-size: 46px;
-    font-weight: 700;
-}
+
 .footer-links{
     display:flex;
     list-style:none;
@@ -29,13 +26,17 @@
 }
 .footer-social-icon{
     display:flex;
-    gap:20px;
+    gap:30px;
 }
 .footer-icons-container{
    padding: 10px;
    padding-bottom: 6px;
-   background: #fbfbfb;
-   border: 1px solid #ebebeb; 
+   font-size:xx-large;
+}
+.footer-icons-container:hover{
+    transform:scale(1.1);
+    transition:0.2s;
+    cursor: pointer;
 }
 
 .footer-copyright{

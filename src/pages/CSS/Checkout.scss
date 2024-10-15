@@ -1,0 +1,21 @@
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: rgb(21, 20, 20);
+    margin-bottom: -20em;
+     // Makes the container take up the full viewport height
+  
+}
+@media(max-width:400px){
+    .checkout-container{
+        margin-bottom:-15em;
+    }
+}
+
+@media(max-width:500px) and (max-width:400px){
+    .checkout-container{
+        margin-bottom:-12em;
+    }
+}

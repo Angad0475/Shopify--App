@@ -17,9 +17,9 @@
     gap:10px;
 }
 .nav-logo p{
- color: #171717;
- font-size: 38px;
- font-weight: 600;
+    color: #383838;
+    font-size: 35px;
+    font-weight: 700;
 }
 
 .nav-menu{
@@ -190,9 +190,8 @@ h4{
     background-color: #444;
   }
   .active-link {
-    color: #444;
+    color: black;
     font-weight: bold; // Choose a color to indicate the active state
-    border-bottom: 1px solid #444;
     transform:scale(1.1); // Optional: Add a border or other styling
     transition: 0.2s;
 }
