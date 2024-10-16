@@ -14,8 +14,8 @@
     }
 }
 
-@media(max-width:500px) and (max-width:400px){
+@media(max-width:500px) and (min-width:400px){
     .checkout-container{
-        margin-bottom:-15em;
+        margin-bottom:-15.5em;
     }
 }
