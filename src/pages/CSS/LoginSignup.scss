@@ -149,16 +149,17 @@
     }
     .error{
         margin-left:-8em;
+        width:100vw;
     }
     .input{
-        width:80%;
+        width:100vw;
         position:relative;
         right:-3em;
-        margin-left:-2em;
+        margin-left:-14.8em;
         margin-right:-7em;
     }
     .forgot-password{
-        margin-left:-5em;
+        margin-left:-3.5em;
     }
     .gray,.submit{
         font-size:15px;
@@ -182,12 +183,14 @@
         margin-left:-8em;
         position:relative;
         left:-4em;
+        width:100vw;
+        margin-right:-4em;
     }
     .input{
-        width:80%;
+        width:100vw;
         position:relative;
         right:-3em;
-        margin-left:-2em;
+        margin-left:-14.8em;
         margin-right:-7em;
     }
     .forgot-password{
