@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory';
@@ -21,15 +21,26 @@ function App() {
             <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
 
             <Routes>
+                {/* Automatically load Shop on homepage */}
                 <Route path='/' element={<Shop />} />
+                
+                {/* Define category-specific routes */}
                 <Route path='/men' element={<ShopCategory banner={men_banner} category="men" />} />
                 <Route path='/women' element={<ShopCategory banner={women_banner} category="women" />} />
                 <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kid" />} />
+                
+                {/* Route for product details by productId */}
                 <Route path="/product/:productId" element={<Product />} />
-                {/* Pass setIsAuthenticated to LoginSignup to update authentication state */}
+                
+                {/* Route for login/signup page with authentication state */}
                 <Route path='/signup' element={<LoginSignup setIsAuthenticated={setIsAuthenticated} />} />
+                
+                {/* Routes for cart and checkout pages */}
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/checkout' element={<Checkout />} />
+
+                {/* Redirect any undefined route to the Shop page */}
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
 
             <Footer />
