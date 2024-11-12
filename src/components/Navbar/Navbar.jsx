@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './Navbar.scss';
 import logo from '../../Assets/logo.png';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
@@ -11,7 +11,6 @@ import Sidebar from '../Sidebar/Sidebar';
 const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
     const totalCartItems = useSelector(getTotalCartItems);
     const navigate = useNavigate();
-    const location = useLocation();
 
     const handleSignOut = () => {
         setIsAuthenticated(false); // Log the user out
@@ -32,11 +31,6 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
         { label: 'Women', path: '/women' },
         { label: 'Kids', path: '/kids' },
     ];
-
-    useEffect(() => {
-        // Set active link based on the current location path when the component mounts
-        setActiveLink(location.pathname);
-    }, [location.pathname]);
 
     const handleNavigation = (path) => {
         setActiveLink(path); // Update the active link state

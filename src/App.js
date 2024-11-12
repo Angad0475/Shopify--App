@@ -40,7 +40,7 @@ function App() {
                 <Route path='/checkout' element={<Checkout />} />
 
                 {/* Redirect any undefined route to the Shop page */}
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="" element={<Navigate to="/"/>} />
             </Routes>
 
             <Footer />
