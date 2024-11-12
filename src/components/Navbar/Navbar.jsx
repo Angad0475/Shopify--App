@@ -22,7 +22,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
     };
 
     // State to track the active navigation link
-    const [activeLink, setActiveLink] = useState('/');
+    const [activeLink, setActiveLink] = useState('Shop');
 
     // Define the navigation items to pass as props
     const menuItems = [
