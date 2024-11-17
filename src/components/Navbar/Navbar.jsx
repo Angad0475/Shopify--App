@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Navbar.scss';
 import logo from '../../Assets/logo.png';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
-import { FaCircle, FaArrowLeft } from "react-icons/fa";
+import { FaCircle } from "react-icons/fa";
 import { getTotalCartItems } from "../../Redux/cartSlice";
 import Sidebar from '../Sidebar/Sidebar';
 
 const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
     const totalCartItems = useSelector(getTotalCartItems) || 0;
     const navigate = useNavigate();
-    const [activeLink, setActiveLink] = useState('');
+    const location = useLocation(); // Get the current route
+    const [activeLink, setActiveLink] = useState(location.pathname);
+
+    useEffect(() => {
+        // Update the active link when the route changes
+        setActiveLink(location.pathname);
+    }, [location.pathname]);
 
     const handleSignOut = () => {
         setIsAuthenticated(false);
@@ -29,18 +35,16 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
     ];
 
     const handleNavigation = (path) => {
-        setActiveLink(path);
         navigate(path);
     };
 
     return (
         <div className="navbar">
-            
             <Sidebar className="sidebar" menuItems={menuItems} handleNavigation={handleNavigation} />
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
-                <p className="logo-head" onClick={()=>navigate('/')}>SHOPIFY</p>
+                <p className="logo-head" onClick={() => navigate('/')}>SHOPIFY</p>
             </div>
 
             <ul className="nav-menu">
