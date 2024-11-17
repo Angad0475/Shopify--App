@@ -12,6 +12,11 @@
     
 /* Apply blur */  
 }
+.logo-head {
+    z-index: 10; /* Higher than other elements */
+    position: relative; /* Ensures stacking context */
+    cursor: pointer; /* Makes it clear it's clickable */
+}
 .nav-logo{
     display:flex;
     align-items: center;
