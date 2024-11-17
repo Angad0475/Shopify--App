@@ -4,48 +4,45 @@ import logo from '../../Assets/logo.png';
 import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
-import { FaCircle } from "react-icons/fa";
+import { FaCircle, FaArrowLeft } from "react-icons/fa";
 import { getTotalCartItems } from "../../Redux/cartSlice";
 import Sidebar from '../Sidebar/Sidebar';
 
 const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
-    const totalCartItems = useSelector(getTotalCartItems);
+    const totalCartItems = useSelector(getTotalCartItems) || 0;
     const navigate = useNavigate();
+    const [activeLink, setActiveLink] = useState('');
 
     const handleSignOut = () => {
-        setIsAuthenticated(false); // Log the user out
-        navigate('/'); // Redirect to homepage
+        setIsAuthenticated(false);
+        navigate('/');
     };
 
     const handleSignUp = () => {
-        navigate('/signup'); // Navigate to the login/signup page
+        navigate('/signup');
     };
 
-    // State to track the active navigation link
-    const [activeLink, setActiveLink] = useState('/');
-
-    // Define the navigation items to pass as props
     const menuItems = [
-        { label: 'Shop', path: '/' },
         { label: 'Men', path: '/men' },
         { label: 'Women', path: '/women' },
         { label: 'Kids', path: '/kids' },
     ];
 
     const handleNavigation = (path) => {
-        setActiveLink(path); // Update the active link state
-        navigate(path); // Navigate to the selected path
+        setActiveLink(path);
+        navigate(path);
     };
 
     return (
         <div className="navbar">
-            <Sidebar className='sidebar' menuItems={menuItems} handleNavigation={handleNavigation} />
+            
+            <Sidebar className="sidebar" menuItems={menuItems} handleNavigation={handleNavigation} />
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
-                <p className="logo-head">SHOPIFY</p>
+                <p className="logo-head" onClick={()=>navigate('/')}>SHOPIFY</p>
             </div>
-            
+
             <ul className="nav-menu">
                 {menuItems.map((item, index) => (
                     <li
@@ -59,7 +56,6 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
             </ul>
 
             <div className="button">
-                {/* Conditionally render Sign In or Sign Out button */}
                 {isAuthenticated ? (
                     <button className="sign" onClick={handleSignOut}>
                         Sign Out
