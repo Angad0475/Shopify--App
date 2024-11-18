@@ -1,33 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './Navbar.scss';
 import logo from '../../Assets/logo.png';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { BsCart4 } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
 import { getTotalCartItems } from "../../Redux/cartSlice";
 import Sidebar from '../Sidebar/Sidebar';
+import { Navigate,useLocation } from "react-router-dom";
 
 const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
-    const totalCartItems = useSelector(getTotalCartItems) || 0;
+    const totalCartItems = useSelector(getTotalCartItems);
     const navigate = useNavigate();
-    const location = useLocation(); // Get the current route
-    const [activeLink, setActiveLink] = useState(location.pathname);
-
-    useEffect(() => {
-        // Update the active link when the route changes
-        setActiveLink(location.pathname);
-    }, [location.pathname]);
+    const location= useLocation();
 
     const handleSignOut = () => {
-        setIsAuthenticated(false);
-        navigate('/');
+        setIsAuthenticated(false); // Log the user out
+        navigate('/'); // Redirect to homepage
     };
 
     const handleSignUp = () => {
-        navigate('/signup');
+        navigate('/signup'); // Navigate to the login/signup page
     };
 
+    // State to track the active navigation link
+    const [activeLink, setActiveLink] = useState();
+
+    // Define the navigation items to pass as props
+    useEffect(()=>{
+        setActiveLink(location.pathname)
+    },[location.pathname]);
     const menuItems = [
         { label: 'Men', path: '/men' },
         { label: 'Women', path: '/women' },
@@ -35,18 +37,19 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
     ];
 
     const handleNavigation = (path) => {
-        navigate(path);
+        setActiveLink(path); // Update the active link state
+        navigate(path); // Navigate to the selected path
     };
 
     return (
         <div className="navbar">
-            <Sidebar className="sidebar" menuItems={menuItems} handleNavigation={handleNavigation} />
+            <Sidebar className='sidebar' menuItems={menuItems} handleNavigation={handleNavigation} />
 
             <div className="nav-logo">
                 <img src={logo} alt="Logo" />
-                <p className="logo-head" onClick={() => navigate('/')}>SHOPIFY</p>
+                <p className="logo-head" onClick={()=>navigate('/')}>SHOPIFY</p>
             </div>
-
+            
             <ul className="nav-menu">
                 {menuItems.map((item, index) => (
                     <li
@@ -60,6 +63,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
             </ul>
 
             <div className="button">
+                {/* Conditionally render Sign In or Sign Out button */}
                 {isAuthenticated ? (
                     <button className="sign" onClick={handleSignOut}>
                         Sign Out
