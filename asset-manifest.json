@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/Shopify--App/static/css/main.580d90d5.css",
-    "main.js": "/Shopify--App/static/js/main.a687c8c3.js",
+    "main.css": "/Shopify--App/static/css/main.b63f2d01.css",
+    "main.js": "/Shopify--App/static/js/main.f9392596.js",
     "static/css/727.07ed095f.chunk.css": "/Shopify--App/static/css/727.07ed095f.chunk.css",
     "static/js/727.a2981257.chunk.js": "/Shopify--App/static/js/727.a2981257.chunk.js",
     "static/css/505.112ac458.chunk.css": "/Shopify--App/static/css/505.112ac458.chunk.css",
-    "static/js/505.eb7d4c91.chunk.js": "/Shopify--App/static/js/505.eb7d4c91.chunk.js",
+    "static/js/505.e369524e.chunk.js": "/Shopify--App/static/js/505.e369524e.chunk.js",
     "static/css/208.046efa25.chunk.css": "/Shopify--App/static/css/208.046efa25.chunk.css",
     "static/js/208.5b554581.chunk.js": "/Shopify--App/static/js/208.5b554581.chunk.js",
     "static/css/294.9675de45.chunk.css": "/Shopify--App/static/css/294.9675de45.chunk.css",
@@ -61,12 +61,12 @@
     "static/media/product_35.png": "/Shopify--App/static/media/product_35.073b8b5de77cfc979821.png",
     "static/media/hand_icon.png": "/Shopify--App/static/media/hand_icon.9c7487cecb600f30901b.png",
     "index.html": "/Shopify--App/index.html",
-    "main.580d90d5.css.map": "/Shopify--App/static/css/main.580d90d5.css.map",
-    "main.a687c8c3.js.map": "/Shopify--App/static/js/main.a687c8c3.js.map",
+    "main.b63f2d01.css.map": "/Shopify--App/static/css/main.b63f2d01.css.map",
+    "main.f9392596.js.map": "/Shopify--App/static/js/main.f9392596.js.map",
     "727.07ed095f.chunk.css.map": "/Shopify--App/static/css/727.07ed095f.chunk.css.map",
     "727.a2981257.chunk.js.map": "/Shopify--App/static/js/727.a2981257.chunk.js.map",
     "505.112ac458.chunk.css.map": "/Shopify--App/static/css/505.112ac458.chunk.css.map",
-    "505.eb7d4c91.chunk.js.map": "/Shopify--App/static/js/505.eb7d4c91.chunk.js.map",
+    "505.e369524e.chunk.js.map": "/Shopify--App/static/js/505.e369524e.chunk.js.map",
     "208.046efa25.chunk.css.map": "/Shopify--App/static/css/208.046efa25.chunk.css.map",
     "208.5b554581.chunk.js.map": "/Shopify--App/static/js/208.5b554581.chunk.js.map",
     "294.9675de45.chunk.css.map": "/Shopify--App/static/css/294.9675de45.chunk.css.map",
@@ -81,7 +81,7 @@
     "51.19cec6b9.chunk.js.map": "/Shopify--App/static/js/51.19cec6b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.580d90d5.css",
-    "static/js/main.a687c8c3.js"
+    "static/css/main.b63f2d01.css",
+    "static/js/main.f9392596.js"
   ]
 }
