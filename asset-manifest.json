@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Shopify--App/static/css/main.2869b2a2.css",
+    "main.css": "/Shopify--App/static/css/main.b1568227.css",
     "main.js": "/Shopify--App/static/js/main.bad52cc9.js",
     "static/css/727.07ed095f.chunk.css": "/Shopify--App/static/css/727.07ed095f.chunk.css",
     "static/js/727.a2981257.chunk.js": "/Shopify--App/static/js/727.a2981257.chunk.js",
@@ -61,7 +61,7 @@
     "static/media/product_35.png": "/Shopify--App/static/media/product_35.073b8b5de77cfc979821.png",
     "static/media/hand_icon.png": "/Shopify--App/static/media/hand_icon.9c7487cecb600f30901b.png",
     "index.html": "/Shopify--App/index.html",
-    "main.2869b2a2.css.map": "/Shopify--App/static/css/main.2869b2a2.css.map",
+    "main.b1568227.css.map": "/Shopify--App/static/css/main.b1568227.css.map",
     "main.bad52cc9.js.map": "/Shopify--App/static/js/main.bad52cc9.js.map",
     "727.07ed095f.chunk.css.map": "/Shopify--App/static/css/727.07ed095f.chunk.css.map",
     "727.a2981257.chunk.js.map": "/Shopify--App/static/js/727.a2981257.chunk.js.map",
@@ -81,7 +81,7 @@
     "51.19cec6b9.chunk.js.map": "/Shopify--App/static/js/51.19cec6b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2869b2a2.css",
+    "static/css/main.b1568227.css",
     "static/js/main.bad52cc9.js"
   ]
 }
