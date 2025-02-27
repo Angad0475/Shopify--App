@@ -24,8 +24,8 @@ import { addToCart } from '../../Redux/cartSlice';
 
     
   return (
-    <div className='productdisplay'>
-        <div className='productdisplay-left'>
+<div className='productdisplay'>
+    <div className='productdisplay-left'>
             <div className="productdisplay-img-list">
                <img id='image'  src={product.image} alt=''/>
                <img id='image'  src={product.image} alt=''/>
@@ -56,10 +56,10 @@ import { addToCart } from '../../Redux/cartSlice';
             <div className="productdisplay-right-description">
                A lightweight, usually knitted, pullover shirt, close-fitting and a round neckline and short sleeves, worn as an undershirt or a garment. 
             </div>
-            <div className="productdisplay-right-sizes">
+        <div className="productdisplay-right-sizes">
                 
-                <div className="productdisplay-right-size">
-                <h1>Select Size</h1>
+            <div className="productdisplay-right-size">
+        
                     {['S','M','L','XL','XXL'].map((size)=>(
                         <div key={size}
                         onClick={()=>setSelectedSize(size)}
@@ -67,14 +67,14 @@ import { addToCart } from '../../Redux/cartSlice';
                         {size}
                         </div>
                     ))}
-                </div>
-                
             </div>
-            <button className='cart' onClick={handleAddToCart}>ADD TO CART</button>
-            <p className='productdisplay-right-category'><span>category :</span>Women, T-Shirt,Crop Top</p>
-            <p className='productdisplay-right-category'><span>Tags :</span>Modern, Latest</p>
+                
         </div>
+        <button className='cart' onClick={handleAddToCart}>ADD TO CART</button>
+        <p className='productdisplay-right-category'><span>category :</span>Women, T-Shirt,Crop Top</p>
+        <p className='productdisplay-right-category'><span>Tags :</span>Modern, Latest</p>
     </div>
-  )
+</div>
+)
 }
 export default ProductDisplay;

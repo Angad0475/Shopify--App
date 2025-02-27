@@ -63,12 +63,6 @@
 .productdisplay-right-price-new{
     color: #ff4141;
 }
-.productdisplay-right-sizes h1{
-    margin-top:50px;
-    color: #656565;
-    font-size: 20px;
-    font-weight: 600;
-}
 
 .productdisplay-right button{
     padding: 20px 40px;
@@ -166,28 +160,18 @@
     border-radius: 3px;
     cursor:pointer;
 }
-.productdisplay-right-size:hover{
-    background-color: #3d3d3d;
-    transition: 0.2s;
-}
 .size-option{
     padding:10px;
     border: 1px solid gray;
     cursor:pointer;
      color:#3d3d3d
 }
-.size-option:hover{
-    background:#d9d7d7;
-    transition:0.2s;
-}
 .size-option.selected{
     border: 2px solid blue;
     background-color: lightblue;
     color:yellow;
-}
-.size-option:active{
-    transform:scale(0.8);
-    transition: 0.2s;
+    transform: scale(1.2);
+    transition: all 0.1s;
 }
 @media(max-width:1024px){
     .productdisplay{
