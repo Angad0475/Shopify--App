@@ -35,12 +35,14 @@ function App() {
         return () => clearTimeout(timer);
     }, [location]);
 
-    let content;
-    if (isLoading) {
-        content = <LoadingScreen />;
-    } else {
-        content = (
-            <Suspense fallback={<LoadingScreen />}>
+
+    return (
+        <div>
+            <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+            {isLoading ? (
+                <LoadingScreen/>
+            ):(
+                <Suspense fallback={<LoadingScreen />}>
                 <Routes>
                     <Route path='/' element={<Shop />} />
                     <Route path='/men' element={<ShopCategory banner={men_banner} category="men" />} />
@@ -53,13 +55,7 @@ function App() {
                     <Route path='*' element={<Navigate to='/' />} />
                 </Routes>
             </Suspense>
-        );
-    }
-
-    return (
-        <div>
-            <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
-            {content}
+            )}
             <Footer />
         </div>
     );

@@ -166,6 +166,10 @@
     cursor:pointer;
      color:#3d3d3d
 }
+.size-option:hover{
+    background-color:#ededed;
+    transition:0.1s;
+}
 .size-option.selected{
     border: 2px solid blue;
     background-color: lightblue;
