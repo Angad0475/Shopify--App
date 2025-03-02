@@ -162,16 +162,16 @@
 }
 .size-option{
     padding:10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(176, 174, 174);
     cursor:pointer;
      color:#3d3d3d
 }
 .size-option:hover{
-    background-color:#ededed;
-    transition:0.1s;
+    border: 1px solid rgb(194, 192, 192);
+    transition: ease-in-out 0.1s;
 }
 .size-option.selected{
-    border: 2px solid blue;
+    border: 1px solid blue;
     background-color: lightblue;
     color:yellow;
     transform: scale(1.2);
@@ -307,6 +307,8 @@
     .productdisplay-right-sizes{
         margin-top: 10px;
         gap: 5px;
+        width:max-content;
+        margin-left:2em;
     }
     
 
@@ -401,8 +403,8 @@
     .productdisplay-right-sizes{
         margin-top: 10px;
         gap: 5px;
-        position:relative;
-        right:-5em;
+        position: relative;
+        right:-4.5em;
     }
     
 
